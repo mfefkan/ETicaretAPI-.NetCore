@@ -1,0 +1,19 @@
+Core => Domain ve Application katmanlarý Core klasörü içerisinde oluþturulur. Çünkü bunlar çekirdek katmanlar olduðu için bu þekilde bir gelenek oluþturulmuþtur.
+
+Infrastructure => Servislerimizi oluþturduðumuz katmanlarýmýz olan infrastructure ve persistance katmanlarý da Infrastructure klasörü içinde tanýmlanýr.
+
+Presentation => Presentation uygulamalarý ise Presentation klasörü içerisinde tanýmlanýr. Presentation uygulamalarý class library'den ziyade console, web app, web api vs. olabilir.
+
+
+Product
+Order
+Customer
+
+(Many To Many =>(CrossTable/JunctionTable) Oluþturulacak)
+1 Order		n Product		
+1 Product	n Order         
+
+(One To Many)
+1 Customer    n Order			
+1 Order		  1 Customer
+
