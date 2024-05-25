@@ -4,6 +4,8 @@ Infrastructure => Servislerimizi oluþturduðumuz katmanlarýmýz olan infrastructur
 
 Presentation => Presentation uygulamalarý ise Presentation klasörü içerisinde tanýmlanýr. Presentation uygulamalarý class library'den ziyade console, web app, web api vs. olabilir.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Product
 Order
@@ -17,3 +19,29 @@ Customer
 1 Customer    n Order			
 1 Order		  1 Customer
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CORS Politikasý nedir ?
+
+Client    -----HttpRequest---->  Backend
+Client   <-----Response-------   Backend
+
+Eðer ki client uygulamasý browserda(Opera,Chrome,Mozilla vs.) çalýþýyorsa burada CORS politikalarý sözkonusudur.
+
+ Browser'larýn (protocol,host,port doðrulama) bu davranýþýna Same-Origin Policy denmektedir.
+
+ Browser'lar doðal olarak almýþ olduklarý Same-Origin Policy önlemini aþabilmek için client uygulamasýnýn istek gönderdiði hedef siteye/origine/endpoint/api'a öncelikle gidip bu siteden gelecek olan requestlere izin olup olmadýðýný soracak ardýndan isteði yap iptal edecek ya da izin verecektir...
+
+ Same-Origin-Policy, zararlý sitelerin diðer sitelerden browser tabanlý veri okumasýný engelleyerek büyük bir güvenlik açýðýný kapatýr!
+
+ CORS Politikasý, API'ler üzerinden browserlarýn almýþ olduklarý doðal Same-Origin Policy önlemini hafifletme politikasýdýr....
+
+ Clientten hosta istek attýk => Angular Client E Ticaret
+
+ $.get("https://localhost:7274/api/products")
+
+ CLÝENTÝN CEVABI : Access to XMLHttpRequest at 'https://localhost:7274/api/products' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
